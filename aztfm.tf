@@ -27,7 +27,6 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
   location            = azurerm_resource_group.aks.location
   resource_group_name = azurerm_resource_group.aks.name
   dns_prefix          = "aks-${random_string.aks_cluster_name.result}"
-}
   default_node_pool = {
     name                           = "nodepool1"
     node_count                     = 2
